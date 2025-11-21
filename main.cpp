@@ -7,6 +7,7 @@
 #include "Operatori.h"
 #include "Puntatori.h"
 #include "EserciziLezione2.h"
+#include "Static.h"
 
 using namespace std; // per evitare di scrivere sempre std::
 
@@ -138,8 +139,8 @@ int main()
 	es->StampaNumeriPari();
 	cout << "------------------------------------" << endl;
 	es->StampaFattoriale();
-	cout << "------------------------------------" << endl;
-	es->Continua();
+	// cout << "------------------------------------" << endl;
+	// es->Continua();
 	cout << "------------------------------------" << endl;
 	es->CalcolaPromozione();
 	cout << "------------------------------------" << endl;
@@ -177,12 +178,27 @@ int main()
 	es->IndirizzieValori();
 	cout << "------------------------------------" << endl;
 
+	cout << "---------------STATIC---------------" << endl;
+	Static* s1 = new Static();
+	Static* s2 = new Static();
+	Static* s3 = new Static();
+
+	delete s1;
+	s1 = nullptr;
+
+	cout << Static::count << "\n";
+
+	delete s2;
+	s2 = nullptr;
+
+	cout << Static::GetCount() << "\n";
+	
 	cin.get(); // input
 	return 0;
 }
 
 /* COMPITI:
-* Creare una classe Weapon con i segueti membri: 
+* Creare una classe Weapon con i seguenti membri: 
 * nome arma
 * tipo
 * munizioni

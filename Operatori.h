@@ -63,7 +63,7 @@ public:
 	// Operatore di inserimento ed estrazione
 	void Stampa()
 	{
-		std::cout << "Valore di a: " << a << std::endl; // Operatore di inserimento
+		std::cout << "Valore di a: " << a << "\n"; // Operatore di inserimento
 	}
 
 	// Operatori Bitwise
